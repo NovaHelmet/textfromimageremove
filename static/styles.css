@@ -1,0 +1,175 @@
+/* General styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1e9d7; /* Set background color to white */
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #0078d4;
+  color: white;
+  padding: 40px 0;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 18px;
+}
+
+/* About section styles */
+.about {
+  padding: 20px 0;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin: 0;
+}
+
+/* How to Use section styles */
+.how-to-use {
+  padding: 20px 0;
+}
+
+.how-to-use h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.how-to-use ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+/* Upload container styles */
+.upload-container {
+  border: 2px dashed #0078d4;
+  padding: 20px;
+  cursor: pointer;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.upload-text {
+  color: #555;
+  margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+.upload-text p {
+  margin: 5px 0;
+}
+
+.upload-text input[type="file"] {
+  display: none; /* Hide the default file input */
+}
+
+.upload-text .choose-btn {
+  background-color: #0078d4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Image box styles */
+.image-box {
+  border: 2px dashed #0078d4;
+  margin-top: 20px;
+  position: relative;
+  overflow: auto; /* Enable scrolling and zooming */
+}
+
+#imageCanvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button container styles */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button, #downloadLink {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+#removeButton {
+  background-color: #0078d4;
+}
+
+#removeButton:hover {
+  background-color: #005a9e;
+}
+
+#downloadLink {
+  background-color: #28a745;
+  display: none;
+}
+
+#downloadLink:hover {
+  background-color: #218838;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-animation {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}

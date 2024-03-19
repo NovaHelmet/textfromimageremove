@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Remove Text from Image online tool</title>
+<meta name="description" content="Simple Remove Text from Image Tool. Upload, edit, and download images easily. This tool allows you to remove text from images quickly and efficiently without removing background.">
+<meta property="og:title" content="TxT Remover">
+<meta property="og:image" content="{{ url_for('static', filename='favicon.png') }}">
+<meta property="og:image:type" content="image/png">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZETR3FXB0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CZETR3FXB0');
+</script>
+
+
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="heading">Remove Text from Image</h1>
+      <p class="subheading">Upload, edit, and download images easily</p>
+    </header>
+
+    <p align="center"><section class="how-to-use">
+      <h2>How to Use</h2>
+      <ol>
+        <b>Click</b> on the "Choose Image" button and select an image from your device. <b>Draw</b> rectangle over the area you want to remove. <b>Click</b> on the "Remove Selected Area" button to process the image. <b>Once</b> processed, click on the "Download Result"  to download the edited image.
+      </ol>
+      <hr>
+    </section></p>
+
+    <div class="upload-container">
+      <div class="upload-text">
+        <p id="fileLabel">Drag and Drop</p>
+        <p></p>
+        <input type="file" id="imageInput" accept="image/*">
+        <button class="choose-btn" onclick="document.getElementById('imageInput').click()">Choose Image</button>
+      </div>
+    </div>
+    <div class="image-box">
+      <canvas id="imageCanvas"></canvas>
+      <div id="selector"></div>
+    </div>
+    <div class="button-container">
+      <button id="removeButton">Remove Selected Area</button>
+      <a id="downloadLink" href="#" download>Download Result</a>
+    </div>
+  </div>
+  <hr>
+
+  <p align="center">"Reload the page to re-edit".</p>
+
+  <p align="center">This is a simple text remover tool. You can upload an image, select text, and download the edited result. It's perfect for quick image text removing.</p>
+
+  <div class="loading-overlay">
+    <div class="loading-animation"></div>
+  </div>
+</body>
+</html>
