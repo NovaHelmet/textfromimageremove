@@ -5,5 +5,3 @@ pip install flask opencv-python numpy pytesseract
 
 To run
 python app.py
-
-it will look like this after run : https://txt.re
